@@ -1,5 +1,5 @@
 function cariMedian(arr) {
-     var separuh = Math.floor(arr.length/2); //ambil setengah panjang array
+     var separuh = Math.floor(arr.length/2); //karena nilai median ada ditengah kumpulan nilai(yang sudah diurutkan) ambil bagi panjang array untuk penanda lokasi nilai median
 
     if(arr.length % 2 === 0){ //kalo panjang array genap
         return (arr[separuh] + arr[separuh-1])/2;
