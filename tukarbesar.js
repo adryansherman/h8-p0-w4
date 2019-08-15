@@ -1,6 +1,14 @@
 function tukarBesarKecil(kalimat) {
-    // you can only write your code here!
+  var tukar = ''
+  for(var i = 0; i < kalimat.length; i++){
+    if(kalimat[i] === kalimat[i].toUpperCase()){
+      tukar += kalimat[i].toLowerCase()
+    }else{
+      tukar += kalimat[i].toUpperCase()
+    }
   }
+  return tukar
+}
   
   // TEST CASES
   console.log(tukarBesarKecil('Hello World')); // "hELLO wORLD"

@@ -18,7 +18,8 @@ console.log(urutkanAbjad('truncate')); // 'acenrttu'
 console.log(urutkanAbjad('developer')); // 'deeeloprv'
 console.log(urutkanAbjad('software')); // 'aeforstw'
 console.log(urutkanAbjad('aegis')); // 'aegis'
-console.log(urutkanAbjad('zaky')); // 'aegis'
+console.log(urutkanAbjad('zaky'));
+console.log(urutkanAbjad('zpmebueergrg'));
 
 
 
