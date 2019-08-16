@@ -6,7 +6,7 @@ function highestScore (students) {
       if (output[batch] === undefined || students[i].score > output[batch].score )  {
           output[batch] = {}
           output[batch].name = students[i].name
-          output[batch].score = students[i].score  
+          output[batch].score = students[i].score
       }
     }
     return output
