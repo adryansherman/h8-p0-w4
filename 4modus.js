@@ -1,10 +1,10 @@
 function cariModus(arr) {
-    var modus=0;
-    var banding=0;
-    for (var i=0;i<arr.length;i++){
-        var temp=0;
-        for (var j=0;j< arr.length;j++){
-            if(arr[i]==arr[j]&&i!==j){
+    var modus = 0;
+    var banding = 0;
+    for (var i = 0; i < arr.length; i++){
+        var temp = 0;
+        for (var j = 0;j< arr.length; j++){
+            if(arr[i] == arr[j] && i !== j){
             temp++;
             }
             if(temp>banding){
