@@ -2,9 +2,13 @@
 function highestScore (students) {
     var output = {}
     for (var i = 0; i < students.length; i++){
-      if (students[i].score > score){
+      var obj = {}
+      //if (output.student[i].class === false ||students[i].score > output.student[i].class.score) {
+          output.(students[i].class) = obj
+          obj.name = students[i].name
+          obj.score = students[i].score
         
-      }
+      //}
     }
 }
   

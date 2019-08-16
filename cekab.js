@@ -10,7 +10,7 @@ function checkAB(str) {
     }
     for (var j=0; j<A.length; j++) {
         for (var k=0; k<B.length; k++) {
-            if  (Math.abs(A[j]-B[k]) > 2) {
+            if  (Math.abs(A[j]-B[k]) > 3) {
                return true
            }
         }
