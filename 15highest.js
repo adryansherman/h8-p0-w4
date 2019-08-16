@@ -3,7 +3,7 @@ function highestScore (students) {
     var output = {}
     for (var i = 0; i < students.length; i++){
           var batch = students[i].class;
-      if (output[batch] === undefined || students[i].score > output[batch].score )  {
+      if (output[batch] === undefined || students[i].score > output[batch].score ){
           output[batch] = {}
           output[batch].name = students[i].name
           output[batch].score = students[i].score
