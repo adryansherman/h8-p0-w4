@@ -13,7 +13,7 @@ function checkAB(str) {
         for (var k = 0; k < hurufB.length; k++){
            if (Math.abs(hurufA[j] - hurufB[k]) > 3){
                return true   
-            }
+            } 
         }
     }
     return false

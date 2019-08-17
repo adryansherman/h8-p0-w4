@@ -1,17 +1,36 @@
-function countProfit(shoppers) {
-    let listBarang = [ ['Sepatu Stacattu', 1500000, 10],
-                       ['Baju Zoro', 500000, 2],
-                       ['Sweater Uniklooh', 175000, 1]
-                     ];
-  
-   var result = []
-   if(shoppers.length === 0){
-     return result
-   }
 
+function countProfit(shoppers) {
+  var listBarang = [
+    ['Sepatu Stacattu', 1500000, 10],
+    ['Baju Zoro', 500000, 2],
+    ['Sweater Uniklooh', 175000, 1],
+  ];
+  
+  var result = []//tampungan semuanya
+  if(shoppers.length === 0){ //kalo length 0, return array kosong
+    return result
+  }
+  
+  for (var i = 0; i < listBarang.length; i++) { //looping list barang
+    var obj = {}; //tampungan object
+    var pembeli = []; //tampungan buat nama pembeli
+    var permintaan = 0; //tampungan buat berapa banyak quantity permintaan
+    for (var j = 0; j < shoppers.length; j++) {
+      if (shoppers[j].product === listBarang[i][0] && listBarang[i][2] - shoppers[j].amount >= permintaan){ //jika barang di shoppers sama dengan list barang dan jika stok list barang - amount >= quantity permintaan
+        permintaan += shoppers[j].amount; //itung jumlah amount permintaan
+        pembeli.push(shoppers[j].name); //push nama nama pembeli
+      }
+    }
+    //output:
+    obj['products'] = listBarang[i][0]; //list produk yang terjual
+    obj['shoppers'] = pembeli; //list pembeli
+    obj['leftOver'] = listBarang[i][2] - permintaan; //sisa stok barang
+    obj['totalProfit'] = listBarang[i][1] * permintaan; //profit
+    result.push(obj);
+  }
+  return result
 }
-   return result
-}
+
   
   // TEST CASES
   console.log(countProfit([{name: 'Windi', product: 'Sepatu Stacattu', amount: 2}, {name: 'Vanessa', product: 'Sepatu Stacattu', amount: 3}, {name: 'Rani', product: 'Sweater Uniklooh', amount: 2}]));
