@@ -8,7 +8,7 @@
         }
     }
   }
-  */
+  */hcuigugeu
   
   // TEST CASES
   /*console.log(digitPerkalianMinimum(24)); // 2

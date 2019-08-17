@@ -6,14 +6,11 @@ function countProfit(shoppers) {
   
    var result = []
    if(shoppers.length === 0){
-       return result
-   }
-   for (var i = 0; i < shoppers.length; i++){
-       var obj = {}
-       for(var i = 0; i < )
-
+     return result
    }
 
+}
+   return result
 }
   
   // TEST CASES
