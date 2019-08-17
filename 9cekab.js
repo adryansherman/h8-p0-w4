@@ -12,10 +12,11 @@ function checkAB(str) {
     for(var j = 0; j < hurufA.length; j++){
         for (var k = 0; k < hurufB.length; k++){
            if (Math.abs(hurufA[j] - hurufB[k]) > 3){
-               return true      
+               return true   
             }
         }
     }
+    return false
 }
   
   // TEST CASES
