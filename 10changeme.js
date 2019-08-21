@@ -1,5 +1,9 @@
 function changeMe(arr) {
+    if(arr.length === 0){
+        console.log('')
+    }
     for(var i = 0; i < arr.length; i++){
+        var header = i+1 + '. ' + arr[i][0] + ' ' + arr[i][1] + ':'
         var data = {}
         data.firstName = arr[i][0]
         data.lastName = arr[i][1]
@@ -10,6 +14,7 @@ function changeMe(arr) {
             }else{
                 data.age = 2019 - arr[i][3]
             }
+        console.log(header)
         console.log(data)
     }
 }
@@ -25,6 +30,6 @@ function changeMe(arr) {
   //   lastName: 'Downey',
   //   gender: 'Male',
   //   age: 'Invalid Birth Year' }
-  //changeMe([]); // ""
+  changeMe([]); // ""
 
 

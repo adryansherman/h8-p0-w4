@@ -2,12 +2,15 @@ function graduates (students) {
     var result = {}
     for (var i = 0; i < students.length; i++){
         var batch = students[i].class
-        if(result[batch] === undefined || students[i].score > 75){
+        if(students[i].score > 75){
+          if(!result[batch]){
             result[batch] = [] 
             var obj = {} 
             obj.name = students[i].name
             obj.score = students[i].score
             result[batch].push(obj)
+          }
+
         }
     }
     return result
