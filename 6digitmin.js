@@ -5,15 +5,16 @@ function digitPerkalianMinimum(angka) {
     for(var i=1; i<=angka; i++){
         if(angka % i==0){
             tampung.push(i)
-            console.log(tampung)
+            //console.log(tampung)
         }
     }
     var tengah=tampung.length/2
-    if(tampung.length==1){
-        digit=String(tampung[0])+String(tampung[0])
-    }else{
+    if(tampung.length > 1){
         digit=String(tampung[tengah])+String(tampung[tengah-1])
-        console.log(digit)
+        //console.log(digit)    
+    }else{
+        digit=String(tampung[0])+String(tampung[0])
+        
     }
     return digit.length
   }
